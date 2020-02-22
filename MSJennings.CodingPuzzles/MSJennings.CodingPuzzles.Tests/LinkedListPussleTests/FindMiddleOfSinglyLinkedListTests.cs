@@ -7,7 +7,7 @@ namespace MSJennings.CodingPuzzles.Tests.LinkedListPussleTests
     public class FindMiddleOfSinglyLinkedListTests
     {
         [TestMethod]
-        public void GetResult_WithOddNumberOfNodes_ShouldReturnCorrectResult()
+        public void GetResult_ShouldReturnCorrectResult()
         {
             // Arrange
             var list = new SinglyLinkedList<int>();
@@ -17,11 +17,14 @@ namespace MSJennings.CodingPuzzles.Tests.LinkedListPussleTests
 
             var prev = list.Root;
 
-            var numberOfNodes = 5;
+            var numberOfNodes = 6;
             SinglyLinkedListNode<int> middleNode = null;
-            int middleIndex = numberOfNodes / 2;
+            int middleIndex =
+                numberOfNodes % 2 == 0 ?
+                numberOfNodes / 2 - 1 :
+                numberOfNodes / 2;
 
-            for (var i = 0; i < numberOfNodes - 1; i++)
+            for (var i = 1; i < numberOfNodes; i++)
             {
                 var next = new SinglyLinkedListNode<int>();
                 next.Value = list.Root.Value + i + 1;
@@ -42,6 +45,7 @@ namespace MSJennings.CodingPuzzles.Tests.LinkedListPussleTests
             var result = sut.GetResult(list);
 
             // Assert
+            Assert.AreEqual(middleNode.Value, result.Value, "Result is not correct");
         }
     }
 }
