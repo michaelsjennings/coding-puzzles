@@ -19,7 +19,7 @@ namespace MSJennings.CodingPuzzles.Tests.ArrayPuzzleTests
             var result = sut.GetResult(arr);
 
             // Assert
-            Assert.AreEqual(2, result, "Result is not correct");
+            CollectionAssert.AreEquivalent(new[] { 2 }, result);
         }
 
         #endregion Public Methods
