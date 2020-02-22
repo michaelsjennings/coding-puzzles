@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MSJennings.CodingPuzzles.Work.ArrayPuzzles
+﻿namespace MSJennings.CodingPuzzles.Work.ArrayPuzzles
 {
     public class FindMissingInteger
     {
@@ -40,12 +38,13 @@ namespace MSJennings.CodingPuzzles.Work.ArrayPuzzles
 
         public class Result
         {
-            #region Public Fields
+            #region Public Properties
 
-            public int MissingIndex;
-            public int MissingValue;
+            public int MissingIndex { get; set; }
 
-            #endregion Public Fields
+            public int MissingValue { get; set; }
+
+            #endregion Public Properties
         }
 
         #endregion Public Classes
