@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace MSJennings.CodingPuzzles.Work.LinkesListPuzzles
+namespace MSJennings.CodingPuzzles.Work.LinkedListPuzzles
 {
     public class LinkedListHasLoop
     {
+        #region Public Methods
+
         public bool GetResult<T>(SinglyLinkedList<T> list)
         {
             var visited = new HashSet<SinglyLinkedListNode<T>>();
@@ -28,5 +28,7 @@ namespace MSJennings.CodingPuzzles.Work.LinkesListPuzzles
 
             return false;
         }
+
+        #endregion Public Methods
     }
 }

@@ -1,7 +1,9 @@
-﻿namespace MSJennings.CodingPuzzles.Work.LinkesListPuzzles
+﻿namespace MSJennings.CodingPuzzles.Work.LinkedListPuzzles
 {
     public class FindMiddleOfSinglyLInkedList
     {
+        #region Public Methods
+
         public SinglyLinkedListNode<T> GetResult<T>(SinglyLinkedList<T> list)
         {
             var slow = list.Root;
@@ -15,5 +17,7 @@
 
             return slow;
         }
+
+        #endregion Public Methods
     }
 }

@@ -1,11 +1,13 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MSJennings.CodingPuzzles.Work.LinkesListPuzzles;
+using MSJennings.CodingPuzzles.Work.LinkedListPuzzles;
 
 namespace MSJennings.CodingPuzzles.Tests.LinkedListPussleTests
 {
     [TestClass]
     public class FindMiddleOfSinglyLinkedListTests
     {
+        #region Public Methods
+
         [TestMethod]
         public void GetResult_ShouldReturnCorrectResult()
         {
@@ -47,5 +49,7 @@ namespace MSJennings.CodingPuzzles.Tests.LinkedListPussleTests
             // Assert
             Assert.AreEqual(middleNode.Value, result.Value, "Result is not correct");
         }
+
+        #endregion Public Methods
     }
 }

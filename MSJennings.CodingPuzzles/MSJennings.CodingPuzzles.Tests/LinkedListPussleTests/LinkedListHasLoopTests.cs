@@ -1,11 +1,13 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MSJennings.CodingPuzzles.Work.LinkesListPuzzles;
+using MSJennings.CodingPuzzles.Work.LinkedListPuzzles;
 
 namespace MSJennings.CodingPuzzles.Tests.LinkedListPussleTests
 {
     [TestClass]
     public class LinkedListHasLoopTests
     {
+        #region Public Methods
+
         [TestMethod]
         public void GetResult_WithLoop_ShouldReturnTrue()
         {
@@ -59,5 +61,7 @@ namespace MSJennings.CodingPuzzles.Tests.LinkedListPussleTests
             // Assert
             Assert.IsFalse(result, "Result is not correct");
         }
+
+        #endregion Public Methods
     }
 }
