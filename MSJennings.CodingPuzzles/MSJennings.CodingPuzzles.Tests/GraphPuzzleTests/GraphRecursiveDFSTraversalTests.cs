@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MSJennings.CodingPuzzles.Work.TreePuzzles;
+using MSJennings.CodingPuzzles.Work.GraphPuzzles;
 
-namespace MSJennings.CodingPuzzles.Tests.TreePuzzleTests
+namespace MSJennings.CodingPuzzles.Tests.GraphPuzzleTests
 {
     [TestClass]
-    public class PreOrderRecursiveTreeTraversalTests
+    public class GraphRecursiveDFSTraversalTests
     {
         #region Public Methods
 
@@ -12,14 +12,14 @@ namespace MSJennings.CodingPuzzles.Tests.TreePuzzleTests
         public void GetResult_ShouldReturnCorrectResult()
         {
             // Arrange
-            var sut = new PreOrderRecursiveTreeTraversal();
+            var sut = new GraphRecursiveDFSTraversal();
 
-            var tree = TreePuzzleTestsHelper.GetTestTree();
+            var graph = GraphPuzzleTestsHelper.GetTestGraph();
 
-            var expected = new[] { 1, 2, 4, 5, 7, 3, 6 };
+            var expected = new[] { 1, 2, 3, 7, 8, 4, 5, 6 };
 
             // Act
-            var result = sut.GetResult(tree);
+            var result = sut.GetResult(graph);
 
             // Assert
             CollectionAssert.AreEqual(expected, result, "Result is not correct");
