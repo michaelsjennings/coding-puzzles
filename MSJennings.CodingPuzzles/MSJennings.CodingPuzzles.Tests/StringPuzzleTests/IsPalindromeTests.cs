@@ -4,37 +4,35 @@ using MSJennings.CodingPuzzles.Work.StringPuzzles;
 namespace MSJennings.CodingPuzzles.Tests.StringPuzzleTests
 {
     [TestClass]
-    public class AreAnagramsOfEachOtherTests
+    public class IsPalindromeTests
     {
         #region Public Methods
 
         [TestMethod]
-        public void AreAnagramsOfEachother_WithNoAnagrams_ShouldReturnFalse()
+        public void GetResult_WithNoPalindrome_ShouldReturnFalse()
         {
             // Arrange
-            var sut = new AreAnagramsOfEachOther();
+            var sut = new IsPalindrome();
 
-            var s1 = "abcd";
-            var s2 = "dcca";
+            var s = "abcdba";
 
             // Act
-            var result = sut.GetResult(s1, s2);
+            var result = sut.GetResult(s);
 
             // Assert
             Assert.IsFalse(result, "Result is incorrect");
         }
 
         [TestMethod]
-        public void AreAnagramsOfEachother_WithYesAnagrams_ShouldReturnTrue()
+        public void GetResult_WithYesPalindrome_ShouldReturnTrue()
         {
             // Arrange
-            var sut = new AreAnagramsOfEachOther();
+            var sut = new IsPalindrome();
 
-            var s1 = "abcd";
-            var s2 = "dcba";
+            var s = "abcba";
 
             // Act
-            var result = sut.GetResult(s1, s2);
+            var result = sut.GetResult(s);
 
             // Assert
             Assert.IsTrue(result, "Result is incorrect");

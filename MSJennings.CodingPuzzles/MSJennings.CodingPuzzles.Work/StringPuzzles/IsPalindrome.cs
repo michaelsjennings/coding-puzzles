@@ -2,24 +2,19 @@
 
 namespace MSJennings.CodingPuzzles.Work.StringPuzzles
 {
-    public class AreAnagramsOfEachOther
+    public class IsPalindrome
     {
         #region Public Methods
 
-        public bool GetResult(string s1, string s2)
+        public bool GetResult(string s)
         {
-            if (s1.Length != s2.Length)
-            {
-                return false;
-            }
-
             // todo: can stop at half-way point
-            for (var i = 0; i < s1.Length; i++)
+            for (var i = 0; i < s.Length; i++)
             {
-                var j = s2.Length - 1 - i;
+                var j = s.Length - 1 - i;
 
-                var c1 = s1[i];
-                var c2 = s2[j];
+                var c1 = s[i];
+                var c2 = s[j];
 
                 if (c1 != c2)
                 {
